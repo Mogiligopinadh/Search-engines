@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover useful apps and technology tools with SmartFind.">
+    <title>SmartFind - App Search Engine</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <a class="logo" href="#">🔎 SmartFind</a>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#results">Explore Apps</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <span class="eyebrow">YOUR DIGITAL DISCOVERY PLATFORM</span>
+        <h1>Find the right app.<br><span>Discover more.</span></h1>
+        <p>Search popular apps, AI tools, learning platforms and developer resources in one place.</p>
+
+        <form id="searchForm" class="search-box">
+            <span aria-hidden="true">🔍</span>
+            <input id="searchInput" type="search"
+                   placeholder="Search apps, AI tools, categories..."
+                   aria-label="Search applications">
+            <button type="submit">Search</button>
+        </form>
+
+        <div class="quick-search">
+            <span>Try:</span>
+            <button type="button" class="suggestion" data-query="AI">AI tools</button>
+            <button type="button" class="suggestion" data-query="learning">Learning</button>
+            <button type="button" class="suggestion" data-query="coding">Coding</button>
+        </div>
+    </section>
+
+    <section class="categories section" id="categories">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">BROWSE BY INTEREST</span>
+                <h2>Explore categories</h2>
+            </div>
+        </div>
+
+        <div class="category-list" id="categoryList">
+            <button class="category active" data-category="All">🌐 All Apps</button>
+            <button class="category" data-category="AI">🤖 AI Tools</button>
+            <button class="category" data-category="Education">📚 Education</button>
+            <button class="category" data-category="Development">💻 Development</button>
+            <button class="category" data-category="Entertainment">🎬 Entertainment</button>
+            <button class="category" data-category="Productivity">⚡ Productivity</button>
+        </div>
+    </section>
+
+    <section class="section results-section" id="results">
+        <div class="results-heading">
+            <div>
+                <span class="eyebrow">DISCOVER SOMETHING USEFUL</span>
+                <h2 id="resultsTitle">Popular Applications</h2>
+                <p id="resultCount" aria-live="polite">Loading applications...</p>
+            </div>
+
+            <div class="result-controls">
+                <label for="sortSelect">Sort:</label>
+                <select id="sortSelect">
+                    <option value="popular">Recommended</option>
+                    <option value="az">Name: A–Z</option>
+                    <option value="za">Name: Z–A</option>
+                </select>
+
+                <button type="button" id="favoritesBtn" class="outline-btn">
+                    ♥ Favorites
+                </button>
+            </div>
+        </div>
+
+        <div class="app-grid" id="appGrid"></div>
+
+        <div id="emptyState" class="empty-state" hidden>
+            <div>🔎</div>
+            <h3>No apps found</h3>
+            <p>Try another keyword or select a different category.</p>
+            <button type="button" id="resetBtn" class="primary-btn">
+                Clear Search
+            </button>
+        </div>
+    </section>
+
+    <section class="about section">
+        <div>
+            <span class="eyebrow">ABOUT THIS PROJECT</span>
+            <h2>One search. More possibilities.</h2>
+            <p>
+                SmartFind is a browser-based app directory built with
+                HTML, CSS and JavaScript. It helps users discover
+                applications using keywords, categories and favorites.
+            </p>
+        </div>
+        <div class="about-icon">🌐</div>
+    </section>
+</main>
+
+<footer>
+    <a class="logo" href="#">🔎 SmartFind</a>
+    <p>A student web development project.</p>
+    <p>© <span id="year"></span> SmartFind</p>
+</footer>
+
+</body>
+</html>
